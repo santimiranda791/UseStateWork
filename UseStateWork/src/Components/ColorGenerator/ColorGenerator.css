@@ -1,0 +1,40 @@
+.color-generator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    width: 100vw; /* Ocupa todo el ancho de la ventana */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+  }
+  
+  .color-generator.dark-mode {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto claro */
+  }
+  
+  .color-generator.light-mode {
+    background-color: #fff; /* Fondo claro */
+    color: #000; /* Texto oscuro */
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
+  button:active {
+    background-color: #bbb;
+  }
