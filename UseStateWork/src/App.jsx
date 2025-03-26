@@ -7,13 +7,20 @@ import { Counter } from './Components/Counter/Counter';
 
 export const App = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const [backgroundColor, setBackgroundColor] = useState('#ffffff');
 
   return (
-    <div className={darkMode ? 'app-container dark-mode' : 'app-container light-mode'}>
+    <div
+      className="app-container"
+      style={{
+        backgroundColor: darkMode ? '#000000' : backgroundColor, 
+        color: darkMode ? '#ffffff' : '#000000', 
+      }}
+    >
       <StateMode darkMode={darkMode} setDarkMode={setDarkMode} />
       <StateLikes darkMode={darkMode} />
-      <ColorGenerator />
-      <Counter/>
+      <ColorGenerator setBackgroundColor={setBackgroundColor} /> {}
+      <Counter />
     </div>
   );
 };
